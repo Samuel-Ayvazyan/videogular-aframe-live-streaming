@@ -14,12 +14,14 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { VideoComponent } from './pages/video/video.component';
 import { VideoAframeComponent } from './pages/video-aframe/video-aframe.component';
+import { NativeVideoComponent } from './pages/native-video/native-video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponent,
     VideoAframeComponent,
+    NativeVideoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<div class="full-height col-sm-6 m-auto">
+  <div class="text-center">
+    <h2>Native video tag with AFrame not working on iOS 11 and Desktop Safari - CORS problem</h2>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9" #scrollTop #embed>
+
+    <vg-player class="embed-responsive-item">
+
+        <a-scene #scene vr-mode-ui="enabled: false" embedded>
+          <a-assets>
+            <video preload="auto" playsinline webkit-playsinline autoplay
+              src="http://static.videogular.com/assets/videos/videogular.mp4"
+              id="video1" crossorigin="anonymous">
+            </video>
+          </a-assets>
+
+          <a-videosphere ios10hls src="#video1" rotation="0 270 0"></a-videosphere>
+
+          <a-entity position="0 1.6 0" camera
+            look-controls="reverseMouseDrag: true;">
+              <a-pointer></a-pointer>
+          </a-entity>
+        </a-scene>
+    </vg-player>
+  </div>
+</div>
