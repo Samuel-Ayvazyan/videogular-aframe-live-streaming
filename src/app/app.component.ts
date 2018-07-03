@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { VgHLS } from 'videogular2/src/streaming/vg-hls/vg-hls';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  @ViewChild(VgHLS) vgHls: VgHLS;
+
 }
