@@ -7,7 +7,7 @@ import { VgHLS } from 'videogular2/src/streaming/vg-hls/vg-hls';
   styleUrls: ['./video-aframe.component.css']
 })
 export class VideoAframeComponent {
-  title = 'app';
+  hlsBitrates = [];
   @ViewChild(VgHLS) vgHls: VgHLS;
 
 }

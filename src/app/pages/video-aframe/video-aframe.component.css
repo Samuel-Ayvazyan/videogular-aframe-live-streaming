@@ -49,6 +49,11 @@
 .col-sm-6 {
     width: 50%;
 }
+@media (max-width: 768px) {
+    .col-sm-6 {
+        width: 100%;
+    }
+}
 .m-auto {
     margin: auto;
 }

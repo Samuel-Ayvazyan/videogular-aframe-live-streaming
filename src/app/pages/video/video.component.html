@@ -31,7 +31,7 @@
 
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-          <video preload="auto" playsinline webkit-playsinline 
+          <video preload="auto" playsinline webkit-playsinline autoplay
           [vgHls]="'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8'"
           (onGetBitrates)="hlsBitrates = $event"
                 id="video2" [vgMedia]='media' #media crossorigin="anonymous">

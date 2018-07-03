@@ -33,7 +33,7 @@
         </vg-controls>
         <a-scene #scene vr-mode-ui="enabled: false" embedded>
           <a-assets>
-            <video preload="auto" playsinline webkit-playsinline 
+            <video preload="auto" playsinline webkit-playsinline autoplay
             [vgHls]="'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8'"
             (onGetBitrates)="hlsBitrates = $event"
                   id="video1" [vgMedia]='media' #media crossorigin="anonymous">
