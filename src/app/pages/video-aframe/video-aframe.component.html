@@ -1,0 +1,52 @@
+<div class="full-height col-sm-6 m-auto">
+  <div class="text-center">
+    <h2>with AFrame not working on iOS 11</h2>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9" #scrollTop #embed>
+
+    <vg-player class="embed-responsive-item">
+
+        <vg-buffering></vg-buffering>
+        <vg-scrub-bar>
+          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+
+        <vg-controls>
+          <vg-play-pause></vg-play-pause>
+
+          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+          <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+          <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+          <vg-mute></vg-mute>
+          <vg-volume></vg-volume>
+
+          <vg-quality-selector [bitrates]="hlsBitrates"
+            (onBitrateChange)="vgHls.setBitrate($event)">
+          </vg-quality-selector>
+
+          <vg-fullscreen></vg-fullscreen>
+        </vg-controls>
+        <a-scene #scene vr-mode-ui="enabled: false" embedded>
+          <a-assets>
+            <video preload="auto" playsinline webkit-playsinline 
+            [vgHls]="'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8'"
+            (onGetBitrates)="hlsBitrates = $event"
+                  id="video1" [vgMedia]='media' #media crossorigin="anonymous">
+            </video>
+          </a-assets>
+
+          <a-videosphere ios10hls src="#video1" rotation="0 270 0"></a-videosphere>
+
+          <a-entity position="0 1.6 0" camera
+            look-controls="reverseMouseDrag: true;">
+              <a-pointer></a-pointer>
+          </a-entity>
+        </a-scene>
+      </vg-player>
+  </div>
+</div>
